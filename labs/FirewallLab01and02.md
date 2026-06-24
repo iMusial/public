@@ -118,9 +118,13 @@ Now to finally set up pfSense's address so our Debian VMs can use it as the gate
 10. For the sake of convenience, type y and press Enter when prompted to revert to HTTP as the webConfigurator protocol
 11. You should see a message saying you can now access the web interface at the LAN IP address you assigned.
 12. Press Enter to continue
-13. Return to your Debian VM and wait a while for DHCP to assign IPs
-14. Open a terminal and ping 8.8.8.8
-15. If you receive bytes back, you're done!
+13. Return to your Debian VM and navigate to Network settings
+14. Under wired connections, press the gear icon
+15. Navigate to the IPV4 tab
+16. Under DNS, disable automatic and set the DNS server address to the pfsense vm address. (172.16.89.3 for example)
+17. Click Apply
+18. Open a terminal and ping 8.8.8.8
+19. If you receive bytes back, you're done!
 
 You can now manage pfsense from either Debian VM using a web browser. Make sure to specify http in the URL!
 For example, http://172.16.89.3
