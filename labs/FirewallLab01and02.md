@@ -121,3 +121,8 @@ Now to finally set up pfSense's address so our Debian VMs can use it as the gate
 13. Return to your Debian VM and wait a while for DHCP to assign IPs
 14. Open a terminal and ping 8.8.8.8
 15. If you receive bytes back, you're done!
+
+You can now manage pfsense from either Debian VM using a web browser. Make sure to specify http in the URL!
+For example, http://172.16.89.3
+Default pfsense login credentials can be found here: https://docs.netgate.com/pfsense/en/latest/usermanager/defaults.html
+Or login using admin, pfsense
