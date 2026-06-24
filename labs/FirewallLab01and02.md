@@ -121,10 +121,14 @@ Now to finally set up pfSense's address so our Debian VMs can use it as the gate
 13. Return to your Debian VM and navigate to Network settings
 14. Under wired connections, press the gear icon
 15. Navigate to the IPV4 tab
-16. Under DNS, disable automatic and set the DNS server address to the pfsense vm address. (172.16.89.3 for example)
-17. Click Apply
-18. Open a terminal and ping 8.8.8.8
-19. If you receive bytes back, you're done!
+16. Under Select IPV4 Method, select Manual
+17. In the address field, use the host Debian VM IP from before (for example, 172.16.89.133)
+18. If you typed 16 for the bit count in pfsense earlier, set the Netmask to 255.255.0.0
+    If you typed 24, set the Netmask to 255.255.255.0
+19. Set the Gateway address to the pfsense IP (for example, 172.16.89.3)
+20. Click Apply
+21. Open a terminal and ping 8.8.8.8
+22. If you receive bytes back, you're done!
 
 You can now manage pfsense from either Debian VM using a web browser. Make sure to specify http in the URL!
 For example, http://172.16.89.3
