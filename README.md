@@ -1,3 +1,3 @@
 # public
 
-nothing here for now!
+Miscellaneous projects
